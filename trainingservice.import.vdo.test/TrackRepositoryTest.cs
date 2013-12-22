@@ -7,13 +7,12 @@
 
 namespace trainingservice.import.vdo.test
 {
-  using System.Data.OleDb;
   using System.Linq;
 
   using NUnit.Framework;
 
   using trainingservice.import.core.Interfaces.Repository;
-  using trainingservice.vdoimport.Repository;
+  using trainingservice.import.vdo.test.Builder;
 
   [TestFixture]
   public class TrackRepositoryTest
@@ -24,25 +23,6 @@ namespace trainingservice.import.vdo.test
     {
       ITrackRepository sut = new VdoTrackRepositoryBuilder().WithDatabaseFilePath(filePath).Build();
       Assert.AreEqual(count, sut.GetTracks().Count());
-    }
-  }
-
-  public class VdoTrackRepositoryBuilder
-  {
-    private string filePath = string.Empty;
-
-    public ITrackRepository Build()
-    {
-      OleDbConnectionStringBuilder builder = new OleDbConnectionStringBuilder();
-      builder.DataSource = this.filePath;
-      builder.Provider = "Provider=Microsoft.ACE.OLEDB.12.0";
-      return new VdoTrackRepository(builder.ToString());
-    }
-
-    public VdoTrackRepositoryBuilder WithDatabaseFilePath(string value)
-    {
-      this.filePath = value;
-      return this;
     }
   }
 }
