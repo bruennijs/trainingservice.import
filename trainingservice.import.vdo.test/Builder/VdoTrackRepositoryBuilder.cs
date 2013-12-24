@@ -1,6 +1,6 @@
 ﻿namespace trainingservice.import.vdo.test.Builder
 {
-  using System.Data.OleDb;
+  using System.Data.Odbc;
 
   using trainingservice.import.core.Interfaces.Repository;
   using trainingservice.vdoimport.Repository;
@@ -11,10 +11,7 @@
 
     public ITrackRepository Build()
     {
-      OleDbConnectionStringBuilder builder = new OleDbConnectionStringBuilder();
-      builder.DataSource = this.filePath;
-      builder.Provider = "Provider=Microsoft.ACE.OLEDB.12.0";
-      return new VdoTrackRepository(builder.ToString());
+      return new VdoTrackRepository("Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=" + this.filePath);
     }
 
     public VdoTrackRepositoryBuilder WithDatabaseFilePath(string value)

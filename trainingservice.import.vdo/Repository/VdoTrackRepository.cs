@@ -10,7 +10,7 @@ namespace trainingservice.vdoimport.Repository
   using System;
   using System.Collections.Generic;
   using System.Data;
-  using System.Data.OleDb;
+  using System.Data.Odbc;
   using System.Globalization;
 
   using trainingservice.import.core.Interfaces.Models;
@@ -20,6 +20,8 @@ namespace trainingservice.vdoimport.Repository
   public class VdoTrackRepository : ITrackRepository
   {
     private readonly string connectionString;
+
+    private readonly DateTime durationBaseDate = DateTime.Parse("30.12.1899 00:00:00");
 
     /// <summary>
     /// Initializes a new instance of the <see cref="VdoTrackRepository"/> class.
@@ -44,11 +46,13 @@ namespace trainingservice.vdoimport.Repository
               yield return
                 new TrackModel()
                   {
-                    Id = reader.GetString(0),
+                    Id = reader.GetInt32(0).ToString(CultureInfo.InvariantCulture),
                     Date = reader.GetDateTime(1),
-                    Duration = TimeSpan.Parse(reader.GetString(3), CultureInfo.InvariantCulture),
-                    Elavation = Convert.ToUInt32(reader.GetInt32(5)),
-                    Distance = Convert.ToUInt32(reader.GetInt32(4))
+                    Duration = this.CalcualteDuration(reader.GetDateTime(2)),
+                    Elavation = Convert.ToUInt32(reader.GetDouble(4)),
+                    Distance = Convert.ToUInt32(reader.GetDouble(3)),
+                    HeartRateAvg = Convert.ToUInt32(reader.GetDouble(5)),
+                    HeartRateMax = Convert.ToUInt32(reader.GetDouble(6))
                   };
             }
           }
@@ -56,16 +60,21 @@ namespace trainingservice.vdoimport.Repository
       }
     }
 
+    private TimeSpan CalcualteDuration(DateTime dateTime)
+    {
+      return dateTime - durationBaseDate;
+    }
+
     private IDbCommand CreateSelectDatenCommand(IDbConnection connection)
     {
       IDbCommand cmd = connection.CreateCommand();
-      cmd.CommandText = "SELECT dat_Id, Datum, Startzeit, Zeit, meter, Hoehendifferenz, Puls, Maxpuls from daten;";
+      cmd.CommandText = "SELECT dat_Id, Datum, Zeit, meter, Hoehendifferenz, Puls, Maxpuls, Startzeit from daten";
       return cmd;
     }
 
     private IDbConnection CreateDbConnection()
     {
-      return new OleDbConnection(this.connectionString);
+      return new OdbcConnection(this.connectionString);
     }
   }
 }

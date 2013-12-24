@@ -13,12 +13,12 @@
 
     public TimeSpan Duration { get; set; }
 
-    public uint Distance { get; set; }
+    public double Distance { get; set; }
 
-    public uint HeartRateAvg { get; set; }
+    public double HeartRateAvg { get; set; }
 
-    public uint HeartRateMax { get; set; }
+    public double HeartRateMax { get; set; }
 
-    public uint Elavation { get; set; }
+    public double Elavation { get; set; }
   }
 }
