@@ -1,6 +1,7 @@
 ﻿namespace trainingservice.app.IoC
 {
   using Autofac;
+  using Autofac.Integration.WebApi;
 
   using trainingservice.app.Controllers;
   using trainingservice.import.core;
@@ -12,7 +13,7 @@
     {
       RegisterModules(container);
 
-      container.RegisterType<TrainingImportController>().SingleInstance();
+      container.RegisterType<TrainingImportController>().InstancePerApiRequest();
     }
 
     private static void RegisterModules(ContainerBuilder container)

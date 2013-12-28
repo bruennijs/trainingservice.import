@@ -8,7 +8,7 @@
   public class ImportCoreModule : Module
   {
     protected override void Load(ContainerBuilder builder)
-    {
+    {      
       builder.RegisterType<TrainingImportService>().As<ITrainingImportService>();
     }
   }

@@ -52,6 +52,8 @@
     <Compile Include="ImportCoreModule.cs" />
     <Compile Include="Interfaces\Models\TrackModel.cs" />
     <Compile Include="Interfaces\Repository\ITrackRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITrackRepositoryFactory.cs" />
+    <Compile Include="Interfaces\Repository\VdoTrackRepositoryFactory.cs" />
     <Compile Include="Interfaces\Services\ITrainingImportService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\TrainingImportService.cs" />

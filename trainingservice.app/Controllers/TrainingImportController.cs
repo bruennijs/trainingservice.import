@@ -10,10 +10,8 @@ namespace trainingservice.app.Controllers
   using System.Web.Http.Controllers;
 
   public class TrainingImportController : ApiController
-    {
-      protected override void Initialize(HttpControllerContext controllerContext)
-      {
-        base.Initialize(controllerContext);
-      }
-    }
+  {
+    ////[HttpGet]
+    ////public IEnumerable<TrackModel> 
+}
 }

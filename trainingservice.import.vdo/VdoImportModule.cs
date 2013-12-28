@@ -1,9 +1,6 @@
 ﻿namespace trainingservice.vdoimport
 {
-  using System.Net.Configuration;
-
   using Autofac;
-  using Autofac.Core;
 
   using trainingservice.import.core.Interfaces.Repository;
   using trainingservice.vdoimport.Repository;
@@ -15,6 +12,7 @@
   {
     protected override void Load(ContainerBuilder builder)
     {
+      builder.RegisterType<VdoTrackRepositoryFactory>().As<ITrackRepositoryFactory>();
       builder.RegisterType<VdoTrackRepository>().As<ITrackRepository>();
     }
   }
