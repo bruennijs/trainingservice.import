@@ -16,7 +16,7 @@ namespace trainingservice.webapi.test.Controller
   public class VdoImportControllerTest
   {
     [Test]
-    [TestCase("training/vdoimport")]
+    [TestCase("training/tracks/vdoimport")]
     public void When_post_dbfile_should_return_location_with_tracks_collection(string url)
     {
       using (var fs = File.OpenRead(@".\TestFiles\vdo1.pcs"))

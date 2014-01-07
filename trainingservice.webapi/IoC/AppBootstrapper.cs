@@ -1,6 +1,7 @@
 ﻿namespace trainingservice.webapi.IoC
 {
   using Autofac;
+  using Autofac.Integration.WebApi;
 
   using trainingservice.import.core;
   using trainingservice.vdoimport;
@@ -12,7 +13,7 @@
     {
       RegisterModules(container);
 
-      container.RegisterType<VdoImportController>();
+      container.RegisterType<TracksController>().InstancePerApiRequest();
     }
 
     private static void RegisterModules(ContainerBuilder container)
