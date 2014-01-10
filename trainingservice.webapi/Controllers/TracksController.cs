@@ -7,6 +7,8 @@ namespace trainingservice.webapi.Controllers
   using System.Net;
   using System.Net.Http;
 
+  using Newtonsoft.Json;
+
   /// <summary>
   /// 
   /// </summary>
@@ -22,6 +24,9 @@ namespace trainingservice.webapi.Controllers
       response.Headers.Location = new Uri("tracks", UriKind.Relative);
       return response;
     }
+
+    [HttpPost]
+    [Route("")]
 
     [HttpGet]
     [Route("")]

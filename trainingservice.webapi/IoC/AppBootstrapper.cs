@@ -14,6 +14,7 @@
       RegisterModules(container);
 
       container.RegisterType<TracksController>().InstancePerApiRequest();
+      container.RegisterType<ProjectController>().InstancePerApiRequest();
     }
 
     private static void RegisterModules(ContainerBuilder container)

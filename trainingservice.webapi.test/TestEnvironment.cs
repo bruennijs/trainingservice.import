@@ -12,7 +12,7 @@ namespace trainingservice.webapi.test
     /// </summary>
     public Uri BaseUrl
     {
-      get { return new Uri("http://127.0.0.1:8090"); }
+      get { return new Uri("http://127.0.0.1:8090/training/"); }
     }
   }
 }
