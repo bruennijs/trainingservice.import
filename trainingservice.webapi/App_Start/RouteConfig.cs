@@ -7,11 +7,14 @@ using System.Web.Routing;
 
 namespace trainingservice.webapi
 {
+  using System.Net.Http;
+  using System.Web.Http;
+
   public class RouteConfig
   {
     public static void RegisterRoutes(RouteCollection routes)
     {
-      routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+      routes.IgnoreRoute("{resource}.axd/{*pathInfo}");      
 
       routes.MapRoute(
           name: "Default",

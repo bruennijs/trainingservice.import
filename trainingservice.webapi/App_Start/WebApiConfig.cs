@@ -11,6 +11,9 @@ namespace trainingservice.webapi
     {
       config.MapHttpAttributeRoutes();
 
+      //// http://www.asp.net/web-api/overview/working-with-http/http-message-handlers
+      ////config.MessageHandlers.Add(new MessageHandler1());
+
       config.Routes.MapHttpRoute(
           name: "DefaultApi",
           routeTemplate: "training/{action}",

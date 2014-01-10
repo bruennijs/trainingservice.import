@@ -7,9 +7,13 @@ namespace trainingservice.webapi.Controllers
   using System.Net;
   using System.Net.Http;
 
+  /// <summary>
+  /// 
+  /// </summary>
   [RoutePrefix("tracks")]
   public class TracksController : ApiController
   {
+
     [HttpPost]
     [Route("vdoimport")]
     public HttpResponseMessage PostVdoDatabaseFile([FromBody] Stream file)
