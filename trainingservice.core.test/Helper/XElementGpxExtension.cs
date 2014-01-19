@@ -24,5 +24,10 @@ namespace trainingservice.core.test.Helper
     {
       return XmlConvert.ToInt32(xml.Element(GpxNs + "extensions").Element(TpExtNs + "TrackPointExtension").Element(TpExtNs + "hr").Value);
     }
+
+    public static int Power(this XElement xml)
+    {
+      return XmlConvert.ToInt32(xml.Element(GpxNs + "extensions").Element(TpExtNs + "TrackPointExtension").Element(TpExtNs + "power").Value);
+    }
   }
 }

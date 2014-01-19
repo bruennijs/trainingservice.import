@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.webapi.test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.core.test", "trainingservice.core.test\trainingservice.core.test.csproj", "{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.integrationtest", "trainingservice.integrationtest\trainingservice.integrationtest.csproj", "{26692871-B01C-49A0-B781-69676F40A25E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,16 @@ Global
 		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Release|x86.ActiveCfg = Release|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{26692871-B01C-49A0-B781-69676F40A25E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -65,6 +65,21 @@
       Assert.AreEqual(value, actual.Root.TrackPoints().Single().Heartrate());
     }
 
+
+    [Test]
+    [TestCase(340)]
+    public void When_export_should_trackpoint_power(int value)
+    {
+      Stream outStream = CreateStream();
+
+      GpxExportService sut = new GpxExportServiceBuilder().Build();
+      sut.Export(new TrackModel(), new[] { new TrackPointModel() { Power = value } }, outStream);
+
+      XDocument actual = Parse(outStream);
+
+      Assert.AreEqual(value, actual.Root.TrackPoints().Single().Power());
+    }
+
     [Test]
     [TestCase(45)]
     public void When_export_should_trackpoint_elevation(int value)
@@ -96,8 +111,6 @@
 
       Assert.AreEqual(value, tp.Element(GpxNs + "time").Value);
     }
-
-
 
     private static XDocument Parse(Stream outStream)
     {

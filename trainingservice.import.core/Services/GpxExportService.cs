@@ -53,7 +53,10 @@ namespace trainingservice.import.core.Services
 
     private static XElement SerializeTrackpointExtension(TrackPointModel tp)
     {
-      return new XElement(GpxNs + "extensions", new XElement(TpExtNs + "TrackPointExtension", new XElement(TpExtNs + "hr", tp.Heartrate)));
+      return new XElement(GpxNs + "extensions", 
+        new XElement(TpExtNs + "TrackPointExtension", 
+          new XElement(TpExtNs + "hr", tp.Heartrate),
+          new XElement(TpExtNs + "power", tp.Power)));
     }
   }
 }
