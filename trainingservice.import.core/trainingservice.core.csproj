@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <OutputPath>bin\x86\Debug\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
@@ -44,19 +44,24 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ImportCoreModule.cs" />
+    <Compile Include="Interfaces\Models\DbModel.cs" />
+    <Compile Include="Interfaces\Models\EntityBase.cs" />
     <Compile Include="Interfaces\Models\TrackModel.cs" />
+    <Compile Include="Interfaces\Models\TrackPointModel.cs" />
     <Compile Include="Interfaces\Repository\ITrackRepository.cs" />
     <Compile Include="Interfaces\Repository\ITrackRepositoryFactory.cs" />
-    <Compile Include="Interfaces\Repository\VdoTrackRepositoryFactory.cs" />
-    <Compile Include="Interfaces\Services\ITrainingImportService.cs" />
+    <Compile Include="Interfaces\Repository\IDbRepository.cs" />
+    <Compile Include="Interfaces\Services\ITrackExportService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\TrainingImportService.cs" />
+    <Compile Include="Services\GpxExportService.cs" />
+    <Compile Include="Services\TrackExportServiceDecorator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

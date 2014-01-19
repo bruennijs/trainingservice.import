@@ -2,13 +2,8 @@
 {
   using System;
 
-  public class TrackModel
+  public class TrackModel : EntityBase
   {
-    /// <summary>
-    /// Gets or sets the id.
-    /// </summary>
-    public string Id { get; set; }
-
     public DateTime Date { get; set; }
 
     public TimeSpan Duration { get; set; }

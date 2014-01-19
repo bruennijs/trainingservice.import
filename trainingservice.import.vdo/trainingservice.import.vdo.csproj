@@ -57,8 +57,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repository\VdoDbRepository.cs" />
     <Compile Include="Repository\VdoTrackRepositoryFactory.cs" />
     <Compile Include="VdoImportModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,9 +70,9 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\trainingservice.import.core\trainingservice.import.core.csproj">
+    <ProjectReference Include="..\trainingservice.import.core\trainingservice.core.csproj">
       <Project>{CC73B654-A62F-45EE-A82A-07381AB315B2}</Project>
-      <Name>trainingservice.import.core</Name>
+      <Name>trainingservice.core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

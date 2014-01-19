@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F8FED5AC-4A84-4958-8250-E3421F367235}</ProjectGuid>
+    <ProjectGuid>{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>trainingservice.import.vdo.test</RootNamespace>
-    <AssemblyName>trainingservice.import.vdo.test</AssemblyName>
+    <RootNamespace>trainingservice.core.test</RootNamespace>
+    <AssemblyName>trainingservice.core.test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -29,18 +29,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>bin\x86\Release\</OutputPath>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.2.1312.1622\lib\net40\Moq.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -53,24 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builder\VdoTrackRepositoryBuilder.cs" />
+    <Compile Include="Helper\XElementGpxExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VdoTrackRepositoryTest.cs" />
+    <Compile Include="Services\GpxExportServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="TestFiles\vdo1.pcs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="Files\gpx.xsd">
+      <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\trainingservice.import.core\trainingservice.core.csproj">
       <Project>{CC73B654-A62F-45EE-A82A-07381AB315B2}</Project>
       <Name>trainingservice.core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\trainingservice.import.vdo\trainingservice.import.vdo.csproj">
-      <Project>{B7D985A1-307D-4BC9-8F10-9B3921BAE169}</Project>
-      <Name>trainingservice.import.vdo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

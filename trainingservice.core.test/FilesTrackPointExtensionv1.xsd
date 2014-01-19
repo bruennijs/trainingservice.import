@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+
+<html lang="en-US">
+
+<head lang="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<script type="text/javascript">/*<![CDATA[*/(function(a){function b(a,b){if(+a)return~a||(d.cookie=h+"=; path=/");j=d.createElement(e),k=d.getElementsByTagName(e)[0],j.src=a,b&&(j.onload=j.onerror=b),k.parentNode.insertBefore(j,k)}function c(){n.api||b(l.shift()||-1,c)}if(this.Mobify)return;var d=document,e="script",f="mobify",g="."+f+".com/",h=f+"-path",i=g+"un"+f+".js",j,k,l=[!1,1],m,n=this.Mobify={points:[+(new Date)],tagVersion:[6,1],ajs:"https://a.mobify.com/garmin/a.js"},o=/((; )|#|&|^)mobify-path=([^&;]*)/g.exec(location.hash+"; "+d.cookie);o?(m=o[3])&&!+(m=o[2]&&sessionStorage[h]||m)&&(l=[!0,"//preview"+g+escape(m)]):(l=a()||l,l[0]&&l.push("//cdn"+i,"//files01"+i)),l.shift()?(d.write('<plaintext style="display:none;">'),setTimeout(c)):b(l[0])})(function(){if(/ip(hone|od)|android.*(mobile)|blackberry.*applewebkit/i.test(navigator.userAgent)){return[1,"//cdn.mobify.com/sites/garmin/production/mobify.js"]}return[0,Mobify.ajs]})/*]]>*/</script>
+
+<meta charset="utf-8">
+<meta name="locale" content="{lv__locale}">
+<meta name="language" content="{lv__language}">
+
+<link rel="stylesheet" type="text/css" href="https://static.garmincdn.com/com.garmin/ui/css/base.lib-v1.4-min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://static.garmincdn.com/com.garmin/ui/js/jquery.lib-v1.4-min.js"></script>
+<link href="https://static.garmincdn.com/com.garmin.www/ui/css/responsive-nav.min-v1.0.0.css" rel="stylesheet" type="text/css">
+<script src="https://static.garmincdn.com/com.garmin.www/ui/js/responsive-nav.min-v1.0.0.js"></script>
+<script type="text/javascript" src="//tealium.hs.llnwd.net/o43/utag/garmin/main/prod/utag.js"></script>
+<style type="text/css">
+#global-footer {background-color: #efefef;} #global-header-wrapper {margin-bottom: 0;}
+/* edit-this style */ .ee-edit-this {position: absolute; top: 6px; left: 6px; z-index: 1000;}
+</style>
+
+
+
+
+
+<!--  ::: newly parsed returnPath: /products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd :: return GET value: https://buy.garmin.com/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep :: return path:/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd ::: Select isn't true, so we would automatically take the user here: https://buy.garmin.comen-US/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd--><link rel="stylesheet" type="text/css" href="//static.garmincdn.com/com.garmin.www/ui/src-css/cs-and-404-v1.0.0.css" />
+
+<title>Garmin</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!--[if lte IE 8]>
+<script type="text/javascript" src="//static.garmincdn.com/shared/j/json2.min.js"></script>
+<![endif]-->
+
+</head>
+<body class="ee   ">
+
+    <div class="container">
+<script type="text/javascript">
+jQuery('body > .container').hide();
+jQuery('body').prepend('<div id="loading" style="text-align:center;"><img src="//static.garmincdn.com/com.garmin/ui/images/ajax-loader.gif" /></div>');
+</script>
+        <div class="row top">
+            <div class="span6">
+                
+                <style type="text/css">
+                body {
+                  background-image: url('//static.garmincdn.com/gdc/home-page/cs-landing/golfing-drive.jpg');  
+                }
+                </style>
+                <h1 id="global-logo">Garmin</h1>
+                
+                
+
+            </div><!-- eo: .span6 -->
+            <div class="cs-container country-selector clearfix round offset1">
+                    <h2 class="h3">Choose your Country or Region</h2>
+                    
+                    <ul class="country-list first">
+                                                            
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /es-AR/AR -->                       <li><a class="flag-es-AR" data-locale="es-AR" href="https://buy.garmin.com/es-AR/AR/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Argentina">Argentina</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /en-AU/AU -->                       <li><a class="flag-en-AU" data-locale="en-AU" href="https://buy.garmin.com/en-AU/AU/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Australia">Australia</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /fr-BE/BE -->                       <li><a class="flag-fr-BE" data-locale="fr-BE" href="https://buy.garmin.com/fr-BE/BE/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Belgique - Français">Belgique - Français</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /nl-BE/BE -->                       <li><a class="flag-nl-BE" data-locale="nl-BE" href="https://buy.garmin.com/nl-BE/BE/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="België - Nederlands">België - Nederlands</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /pt-BR/BR -->                       <li><a class="flag-pt-BR" data-locale="pt-BR" href="https://buy.garmin.com/pt-BR/BR/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Brasil">Brasil</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /en-CA/CA -->                       <li><a class="flag-en-CA" data-locale="en-CA" href="https://buy.garmin.com/en-CA/CA/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Canada (English)">Canada (English)</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /es-CL/CL -->                       <li><a class="flag-es-CL" data-locale="es-CL" href="https://buy.garmin.com/es-CL/CL/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Chile">Chile</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /da-DK/DK -->                       <li><a class="flag-da-DK" data-locale="da-DK" href="https://buy.garmin.com/da-DK/DK/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Danmark">Danmark</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /de-DE/DE -->                       <li><a class="flag-de-DE" data-locale="de-DE" href="https://buy.garmin.com/de-DE/DE/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Deutschland">Deutschland</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /es-ES/ES -->                       <li><a class="flag-es-ES" data-locale="es-ES" href="https://buy.garmin.com/es-ES/ES/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="España">España</a></li>
+                                          
+                                              </ul><ul class="country-list">
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /fr-FR/FR -->                       <li><a class="flag-fr-FR" data-locale="fr-FR" href="https://buy.garmin.com/fr-FR/FR/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="France">France</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /it-IT/IT -->                       <li><a class="flag-it-IT" data-locale="it-IT" href="https://buy.garmin.com/it-IT/IT/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Italia">Italia</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /en-IE/GB -->                       <li><a class="flag-en-IE" data-locale="en-IE" href="https://buy.garmin.com/en-IE/GB/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Ireland">Ireland</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /es-MX/MX -->                       <li><a class="flag-es-MX" data-locale="es-MX" href="https://buy.garmin.com/es-MX/MX/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="México">México</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /nl-NL/NL -->                       <li><a class="flag-nl-NL" data-locale="nl-NL" href="https://buy.garmin.com/nl-NL/NL/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Nederland">Nederland</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /en-NZ/AU -->                       <li><a class="flag-en-NZ" data-locale="en-NZ" href="https://buy.garmin.com/en-NZ/AU/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="New Zealand">New Zealand</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /nb-NO/NO -->                       <li><a class="flag-nb-NO" data-locale="nb-NO" href="https://buy.garmin.com/nb-NO/NO/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Norway">Norway</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /de-AT/AT -->                       <li><a class="flag-de-AT" data-locale="de-AT" href="https://buy.garmin.com/de-AT/AT/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Österreich">Österreich</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /pl-PL/PL -->                       <li><a class="flag-pl-PL" data-locale="pl-PL" href="https://buy.garmin.com/pl-PL/PL/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Polska">Polska</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /pt-PT/ES -->                       <li><a class="flag-pt-PT" data-locale="pt-PT" href="https://buy.garmin.com/pt-PT/ES/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Portugal">Portugal</a></li>
+                                          
+                                              </ul><ul class="country-list">
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /en-ZA/ZA -->                       <li><a class="flag-en-ZA" data-locale="en-ZA" href="https://buy.garmin.com/en-ZA/ZA/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Sub-Saharan Africa">Sub-Saharan Africa</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /fi-FI/FI -->                       <li><a class="flag-fi-FI" data-locale="fi-FI" href="https://buy.garmin.com/fi-FI/FI/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Suomi">Suomi</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /sv-SE/SE -->                       <li><a class="flag-sv-SE" data-locale="sv-SE" href="https://buy.garmin.com/sv-SE/SE/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="Sverige">Sverige</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /en-GB/GB -->                       <li><a class="flag-en-GB" data-locale="en-GB" href="https://buy.garmin.com/en-GB/GB/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="United Kingdom">United Kingdom</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /en-US/US -->                       <li><a class="flag-en-US" data-locale="en-US" href="https://buy.garmin.com/en-US/US/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="United States">United States</a></li>
+                                          
+                                                                  <li><a class="flag-zh-CN" data-locale="zh-CN" href="http://shop.yourlbs1.cn/webstore" title="中国 - 中文">中国 - 中文</a></li>
+                                          
+                                                                  <li><a class="flag-zh-TW" data-locale="zh-TW" href="https://my.garmin.com.tw/store" title="台灣 - 中文">台灣 - 中文</a></li>
+                                          
+                                            <!-- parsedUrl is: Array parsedUrl host: buy.garmin.com and path? /en-US/digital -->                       <li><a class="flag-en-DG" data-locale="en-DG" href="https://buy.garmin.com/en-US/digital/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd?redirect=http://www.garmin.com/en-US.ep" title="All Other Countries">All Other Countries</a></li>
+                                          
+                                        </ul>
+                    
+		<ul>
+			
+            </div><!-- eo: .cs-container -->
+        </div><!-- eo: .row -->
+</div><!-- eo: .background -->
+<script type="text/javascript">
+    var pagePath         = '/products/partNum/xmlschemas/TrackPointExtension/v1/TrackPointExtensionv1.xsd';
+    var pagePathSegments = pagePath.split('/');
+    if (pagePath.indexOf('.ep') == -1 && pagePath.indexOf('.html') == -1 && pagePath.indexOf('.htm') == -1 && pagePath.search(/[a-z][a-z]\-[A-Z][A-Z]/) != -1) {
+      pagePath = '/';
+    }
+
+    jQuery('.country-list a').click(function(e){
+        e.preventDefault();
+        writeCookies(jQuery(this).attr('data-locale'));
+        window.location = jQuery(this).attr('href');
+    });
+    function writeCookies(myLocale) {
+        //set cookie from my data attr
+        var locale = myLocale;
+        document.cookie = 'GarminUserPrefs='+locale+'; path=/; domain=.garmin.com;';
+        var localeUnder = locale.replace('-','_');
+        document.cookie = 'GarminLocalePref='+localeUnder+'; path=/; domain=.garmin.com;';
+        garminGlobalStore.setGlobal('locale',locale);
+    }
+    var manualSelect = false;
+    if (manualSelect == true) {
+        jQuery('#loading').remove();
+        jQuery('body > .container').show();
+    } else {
+        var goLocale   = garminGlobalStore.getGlobal('locale');
+        var goLink     = jQuery('.country-list a[data-locale='+ goLocale +']');
+        var userLocale = window.garminHost.env.browser.locale;
+        var userLink   = jQuery('.country-list a[data-locale='+ userLocale +']');
+        if (typeof(goLocale) != 'undefined' && goLocale != false && goLink.length > 0) {
+           writeCookies(goLocale);
+           window.location = goLink.attr('href');
+        } else {
+           jQuery('#loading').remove();
+           jQuery('body > .container').show();
+        }
+    }
+</script>
+
+<style type="text/css">
+  a.flag-en-DG {background-position: 0 12px!important;}
+</style>

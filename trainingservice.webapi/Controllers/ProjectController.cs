@@ -5,34 +5,45 @@ using System.Web.Http;
 
 namespace trainingservice.webapi.Controllers
 {
+  using System.IO;
   using System.Text;
   using System.Threading.Tasks;
   using System.Web.Http.Results;
+  using System.Web.SessionState;
 
   using Newtonsoft.Json;
 
   using trainingservice.webapi.Dto;
 
   [RoutePrefix("projects")]
-  public class ProjectController : ApiController
+  public class ProjectController : ApiController, IRequiresSessionState
   {
+    [HttpPost]
+    [Route("{id}/vdoimport")]
+    public HttpResponseMessage PostVdoDatabaseFile([FromBody] Stream file)
+    {
+      HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.Created);
+      response.Headers.Location = new Uri("tracks", UriKind.Relative);
+      return response;
+    }
+
     [HttpPost]
     [Route("")]
     public async Task<HttpResponseMessage> PostProject(HttpRequestMessage request)
     {
       string json = await request.Content.ReadAsStringAsync();
-      Project project = JsonConvert.DeserializeObject<Project>(json);
+      ProjectDto projectDto = JsonConvert.DeserializeObject<ProjectDto>(json);
 
-      project.Id = Guid.NewGuid().ToString();
+      projectDto.Id = Guid.NewGuid().ToString();
 
       ////return new OkResult(request);
       HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK)
                                                   {
                                                     Content =
-                                                      new StringContent(JsonConvert.SerializeObject(project))
+                                                      new StringContent(JsonConvert.SerializeObject(projectDto))
                                                   };
 
-      response.Headers.Location = new Uri(request.RequestUri, project.Id);
+      response.Headers.Location = new Uri(request.RequestUri, projectDto.Id);
 
       return response;
     }
@@ -41,14 +52,14 @@ namespace trainingservice.webapi.Controllers
     [Route("{id}")]
     public IHttpActionResult GetById(string id)
     {
-      return new JsonResult<Project>(new Project() { Id = id }, new JsonSerializerSettings(), new ASCIIEncoding(), this);
+      return new JsonResult<ProjectDto>(new ProjectDto() { Id = id }, new JsonSerializerSettings(), new ASCIIEncoding(), this);
     }
 
     [HttpGet]
     [Route("{id}.apiserialize")]
-    public Project GetByIdApiSerialize(string id)
+    public ProjectDto GetByIdApiSerialize(string id)
     {
-      return new Project() { Id = id };
+      return new ProjectDto() { Id = id };
     }
   }
 }

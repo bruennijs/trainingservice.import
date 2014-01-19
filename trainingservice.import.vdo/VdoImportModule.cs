@@ -14,6 +14,7 @@
     {
       builder.RegisterType<VdoTrackRepositoryFactory>().As<ITrackRepositoryFactory>();
       builder.RegisterType<VdoTrackRepository>().As<ITrackRepository>();
+      builder.RegisterType<VdoDbRepository>().As<IDbRepository>();
     }
   }
 }

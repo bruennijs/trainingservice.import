@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.import.vdo", "trainingservice.import.vdo\trainingservice.import.vdo.csproj", "{B7D985A1-307D-4BC9-8F10-9B3921BAE169}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.import.core", "trainingservice.import.core\trainingservice.import.core.csproj", "{CC73B654-A62F-45EE-A82A-07381AB315B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.core", "trainingservice.import.core\trainingservice.core.csproj", "{CC73B654-A62F-45EE-A82A-07381AB315B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.import.vdo.test", "trainingservice.import.vdo.test\trainingservice.import.vdo.test.csproj", "{F8FED5AC-4A84-4958-8250-E3421F367235}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.import.test", "trainingservice.import.core.test\trainingservice.import.test.csproj", "{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4EDBF707-69E7-4FF5-970C-3702424F9E7E}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +15,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.webapi", "trainingservice.webapi\trainingservice.webapi.csproj", "{79A5412D-9A4A-464C-B850-01749FAE890B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.webapi.test", "trainingservice.webapi.test\trainingservice.webapi.test.csproj", "{9E9DA1C6-90C6-4165-9ACE-EFC06F313EDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trainingservice.core.test", "trainingservice.core.test\trainingservice.core.test.csproj", "{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,16 +64,6 @@ Global
 		{F8FED5AC-4A84-4958-8250-E3421F367235}.Release|Mixed Platforms.Build.0 = Release|x86
 		{F8FED5AC-4A84-4958-8250-E3421F367235}.Release|x86.ActiveCfg = Release|x86
 		{F8FED5AC-4A84-4958-8250-E3421F367235}.Release|x86.Build.0 = Release|x86
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{E372B3D8-A054-4BF3-9D70-BCC23BE98B70}.Release|x86.ActiveCfg = Release|Any CPU
 		{79A5412D-9A4A-464C-B850-01749FAE890B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79A5412D-9A4A-464C-B850-01749FAE890B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79A5412D-9A4A-464C-B850-01749FAE890B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -94,6 +84,16 @@ Global
 		{9E9DA1C6-90C6-4165-9ACE-EFC06F313EDA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9E9DA1C6-90C6-4165-9ACE-EFC06F313EDA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9E9DA1C6-90C6-4165-9ACE-EFC06F313EDA}.Release|x86.ActiveCfg = Release|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{01A6EF96-E40D-43B2-AB6B-584A7503DAA7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -123,7 +123,10 @@
   <ItemGroup>
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\TracksController.cs" />
-    <Compile Include="Dto\Project.cs" />
+    <Compile Include="Controllers\VdoDbController.cs" />
+    <Compile Include="Dto\DbDto.cs" />
+    <Compile Include="Dto\ProjectDto.cs" />
+    <Compile Include="Dto\TrackSummaryDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -152,9 +155,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\trainingservice.import.core\trainingservice.import.core.csproj">
+    <ProjectReference Include="..\trainingservice.import.core\trainingservice.core.csproj">
       <Project>{CC73B654-A62F-45EE-A82A-07381AB315B2}</Project>
-      <Name>trainingservice.import.core</Name>
+      <Name>trainingservice.core</Name>
     </ProjectReference>
     <ProjectReference Include="..\trainingservice.import.vdo\trainingservice.import.vdo.csproj">
       <Project>{B7D985A1-307D-4BC9-8F10-9B3921BAE169}</Project>

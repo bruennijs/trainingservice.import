@@ -12,25 +12,12 @@ namespace trainingservice.webapi.Controllers
   /// <summary>
   /// 
   /// </summary>
-  [RoutePrefix("tracks")]
+  [RoutePrefix("projects/{projectid}/tracks")]
   public class TracksController : ApiController
   {
-
-    [HttpPost]
-    [Route("vdoimport")]
-    public HttpResponseMessage PostVdoDatabaseFile([FromBody] Stream file)
-    {
-      HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.Created);
-      response.Headers.Location = new Uri("tracks", UriKind.Relative);
-      return response;
-    }
-
-    [HttpPost]
-    [Route("")]
-
     [HttpGet]
     [Route("")]
-    public HttpResponseMessage GetTracks()
+    public HttpResponseMessage GetTracks(string projectid)
     {
       return new HttpResponseMessage(HttpStatusCode.OK);
     }
