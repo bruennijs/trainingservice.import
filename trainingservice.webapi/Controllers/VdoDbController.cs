@@ -2,17 +2,30 @@
 
 namespace trainingservice.webapi.Controllers
 {
+  using System.Net.Http;
   using System.Threading.Tasks;
 
+  using trainingservice.import.core.Interfaces.Repository;
   using trainingservice.webapi.Dto;
 
-  [RoutePrefix("projects/{projectid}/vdo")]
+  [RoutePrefix("databases")]
   public class VdoDbController : ApiController
   {
-    [HttpPost]
-    [Route("import")]
-    public Task<TrackSummaryDto[]> ImportVdoDb(string projectid)
+    private readonly IDbRepository dbRepository;
+
+    private readonly ITrackRepositoryFactory trackRepositoryFactory;
+
+    public VdoDbController(IDbRepository dbRepository)
     {
+      this.dbRepository = dbRepository;
+    }
+
+    [HttpPost]
+    [Route("{id}")]
+    public Task<TrackSummaryDto[]> ImportVdoDb(HttpRequestMessage requestMessage)
+    {
+      this.trackRepositoryFactory.Create()
+
       return Task.FromResult(new [] { new TrackSummaryDto() });
     }
   }

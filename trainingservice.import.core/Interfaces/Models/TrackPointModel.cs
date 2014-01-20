@@ -8,7 +8,7 @@ namespace trainingservice.import.core.Interfaces.Models
 
     public int Elevation { get; set; }
 
-    public DateTime Time { get; set; }
+    public TimeSpan Time { get; set; }
 
     public double Latitude { get; set; }
 

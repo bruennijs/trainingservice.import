@@ -44,17 +44,5 @@ namespace trainingservice.import.core.Interfaces.Repository
     /// </summary>
     /// <returns>DB models of this db.</returns>
     IEnumerable<DbModel> Get();
-
-    /// <summary>
-    /// Gets the samples of the track.
-    /// </summary>
-    /// <param name="dbId">The database identifier.</param>
-    /// <param name="trackId">The track identifier.</param>
-    /// <returns>New inistance.</returns>
-    IEnumerable<TrackSample> GetTrackSamples(string dbId, string trackId);
-  }
-
-  public interface TrackSample
-  {
   }
 }

@@ -97,19 +97,22 @@
     }
 
     [Test]
-    [TestCase("2014-01-18T01:20:23Z")]
-    public void When_export_should_trackpoint_time(string value)
+    [TestCase("2014-01-18T14:00:00Z", 32.0)]
+    public void When_export_should_trackpoint_time(string trackModelDate, double trackPointTime)
     {
       Stream outStream = CreateStream();
 
       GpxExportService sut = new GpxExportServiceBuilder().Build();
-      sut.Export(new TrackModel(), new[] { new TrackPointModel() { Time = DateTime.Parse(value) } }, outStream);
+      DateTime baseDate = DateTime.Parse(trackModelDate);
+      TimeSpan relTime = TimeSpan.FromSeconds(trackPointTime);
+
+      sut.Export(new TrackModel() { Date = baseDate }, new[] { new TrackPointModel() { Time = relTime } }, outStream);
 
       XDocument actual = Parse(outStream);
 
       XElement tp = actual.Root.TrackPoints().Single();
 
-      Assert.AreEqual(value, tp.Element(GpxNs + "time").Value);
+      Assert.AreEqual((baseDate + relTime).ToUniversalTime(), DateTime.Parse(tp.Element(GpxNs + "time").Value).ToUniversalTime());
     }
 
     private static XDocument Parse(Stream outStream)

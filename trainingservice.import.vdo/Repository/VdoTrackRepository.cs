@@ -22,7 +22,7 @@ namespace trainingservice.vdoimport.Repository
   {
     private readonly string connectionString;
 
-    private readonly DateTime durationBaseDate = DateTime.Parse("30.12.1899 00:00:00");
+    private static readonly DateTime durationBaseDate = DateTime.Parse("30.12.1899 00:00:00");
 
     /// <summary>
     /// Initializes a new instance of the <see cref="VdoTrackRepository"/> class.
@@ -44,21 +44,28 @@ namespace trainingservice.vdoimport.Repository
           {
             while (reader.Read())
             {
-              yield return
-                new TrackModel()
-                  {
-                    Id = reader.GetInt32(0).ToString(CultureInfo.InvariantCulture),
-                    Date = reader.GetDateTime(1),
-                    Duration = this.CalcualteDuration(reader.GetDateTime(2)),
-                    Elavation = Convert.ToUInt32(reader.GetDouble(4)),
-                    Distance = Convert.ToUInt32(reader.GetDouble(3)),
-                    HeartRateAvg = Convert.ToUInt32(reader.GetDouble(5)),
-                    HeartRateMax = Convert.ToUInt32(reader.GetDouble(6))
-                  };
+              yield return this.ParseTrackModel(reader);
             }
           }
         }
       }
+    }
+
+    private TrackModel ParseTrackModel(IDataReader reader)
+    {
+      string id = reader.GetInt32(0).ToString(CultureInfo.InvariantCulture);
+      DateTime date = reader.GetDateTime(1);
+      TimeSpan startTime = CalcualteDuration(reader.GetDateTime(2));
+      return new TrackModel()
+               {
+                 Id = id,
+                 Date = date.Add(startTime),
+                 Duration = CalcualteDuration(reader.GetDateTime(3)),
+                 Elavation = Convert.ToUInt32(reader.GetDouble(5)),
+                 Distance = Convert.ToUInt32(reader.GetDouble(4)),
+                 HeartRateAvg = Convert.ToUInt32(reader.GetDouble(6)),
+                 HeartRateMax = Convert.ToUInt32(reader.GetDouble(7))
+               };
     }
 
     public IEnumerable<TrackPointModel> GetTrackPoints(TrackModel track)
@@ -82,13 +89,12 @@ namespace trainingservice.vdoimport.Repository
 
     private static TrackPointModel ParseTrackPoint(IDataReader reader)
     {
-      ////DateTime time = reader.GetDateTime(2);      
-
       return new TrackPointModel()
                {
                  Id = reader.GetInt32(0).ToString(CultureInfo.InvariantCulture),
                  Distance = reader.GetInt32(1),
-                 Time = DateTime.Parse(reader.GetString(2), CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToUniversalTime(),
+                 ////Time = DateTime.Parse(reader.GetString(2), CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToUniversalTime(),
+                 Time = CalcualteDuration(DateTime.Parse(reader.GetString(2), CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToUniversalTime()),
                  Heartrate = reader.GetInt32(3),
                  Elevation = reader.GetInt32(4),
                  Cadence = reader.GetInt32(5),
@@ -98,7 +104,7 @@ namespace trainingservice.vdoimport.Repository
                };
     }
 
-    private TimeSpan CalcualteDuration(DateTime dateTime)
+    private static TimeSpan CalcualteDuration(DateTime dateTime)
     {
       return dateTime - durationBaseDate;
     }
@@ -116,7 +122,7 @@ namespace trainingservice.vdoimport.Repository
     private IDbCommand CreateSelectDatenCommand(IDbConnection connection)
     {
       IDbCommand cmd = connection.CreateCommand();
-      cmd.CommandText = "SELECT dat_Id, Datum, Zeit, meter, Hoehendifferenz, Puls, Maxpuls, Startzeit from daten";
+      cmd.CommandText = "SELECT dat_Id, Datum, Startzeit, Zeit, meter, Hoehendifferenz, Puls, Maxpuls from daten";
       return cmd;
     }
 

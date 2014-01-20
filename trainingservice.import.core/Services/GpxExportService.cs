@@ -2,6 +2,7 @@
 
 namespace trainingservice.import.core.Services
 {
+  using System;
   using System.IO;
   using System.Linq;
   using System.Xml;
@@ -25,13 +26,13 @@ namespace trainingservice.import.core.Services
 
     public void Export(TrackModel track, IEnumerable<TrackPointModel> trackPoints, Stream outputStream)
     {
-      XElement root = new XElement(GpxNs + "gpx", new XAttribute("version", "1.1"), 
+      XElement root = new XElement(GpxNs + "gpx", new XAttribute("creator", "trainingservice"), new XAttribute("version", "1.1"),
         new XElement(GpxNs + "metadata", new XElement(GpxNs + "time", XmlConvert.ToString(track.Date, XmlDateTimeSerializationMode.Utc))));
 
       if (trackPoints != null)
       {
         root.Add(new XElement(GpxNs + "trk", new XElement(GpxNs + "trkseg",
-          trackPoints.Select(this.SerializeTrackpoint))));
+          trackPoints.Select(tp => this.SerializeTrackpoint(track, tp)))));
       }
 
       XDocument doc = new XDocument();
@@ -40,14 +41,14 @@ namespace trainingservice.import.core.Services
       doc.Save(outputStream, SaveOptions.None);
     }
 
-    private XElement SerializeTrackpoint(TrackPointModel tp)
+    private XElement SerializeTrackpoint(TrackModel model, TrackPointModel tp)
     {
       return new XElement(
         GpxNs + "trkpt",
         new XAttribute("lat", XmlConvert.ToString(tp.Latitude)),
         new XAttribute("lon", XmlConvert.ToString(tp.Longitude)),
-        new XElement(GpxNs + "time", XmlConvert.ToString(tp.Time, XmlDateTimeSerializationMode.Utc)),
         new XElement(GpxNs + "ele", XmlConvert.ToString(tp.Elevation)),
+        new XElement(GpxNs + "time", XmlConvert.ToString(model.Date + tp.Time, XmlDateTimeSerializationMode.Utc)),
         SerializeTrackpointExtension(tp));
     }
 

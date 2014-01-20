@@ -28,6 +28,14 @@ namespace trainingservice.import.vdo.test
     }
 
     [Test]
+    [TestCase(@"C:\git\trainingservice\trainingservice.import.vdo.test\TestFiles\vdo1.pcs", "4", "2013-12-07T14:10:00Z")]
+    public void When_get_tracks_should_return_expected_track_count(string filePath, string id, string time)
+    {
+      ITrackRepository sut = new VdoTrackRepositoryBuilder().WithDatabaseFilePath(filePath).Build();
+      Assert.AreEqual(DateTime.Parse(time).ToUniversalTime(), sut.GetTracks().Single(t => t.Id == id).Date);
+    }
+
+    [Test]
     [TestCase(@".\TestFiles\vdo1.pcs", "1", 0.0)]
     [TestCase(@".\TestFiles\vdo1.pcs", "5", 51.0)]
     public void When_get_duration_should_return_expected_value(string filePath, string id, double duration)
@@ -70,11 +78,11 @@ namespace trainingservice.import.vdo.test
     }
 
     [Test]
-    [TestCase(@".\TestFiles\vdo1.pcs", "3", "11111", "1899-12-30T01:22:00Z")]
-    public void When_get_trackpoints_expect_time(string filePath, string id, string trackPointId, string value)
+    [TestCase(@".\TestFiles\vdo1.pcs", "3", "11111", 4920.0)]
+    public void When_get_trackpoints_expect_time(string filePath, string id, string trackPointId, double time)
     {
       ITrackRepository sut = new VdoTrackRepositoryBuilder().WithDatabaseFilePath(filePath).Build();
-      Assert.AreEqual(DateTime.Parse(value).ToUniversalTime(), sut.GetTrackPoints(sut.GetTracks().Single(t => t.Id == id)).Single(tp => tp.Id == trackPointId).Time);
+      Assert.AreEqual(TimeSpan.FromSeconds(time), sut.GetTrackPoints(sut.GetTracks().Single(t => t.Id == id)).Single(tp => tp.Id == trackPointId).Time);
     }
 
     [Test]
