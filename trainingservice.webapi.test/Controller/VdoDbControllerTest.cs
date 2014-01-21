@@ -13,15 +13,17 @@ namespace trainingservice.webapi.test.Controller
 
   [Category("Integration")]
   [TestFixture]
-  public class VdoImportControllerTest
+  public class VdoDbControllerTest
   {
     [Test]
-    [TestCase("training/tracks/vdoimport")]
+    [TestCase("databases/4711")]
     public void When_post_dbfile_should_return_location_with_tracks_collection(string url)
     {
       using (var fs = File.OpenRead(@".\TestFiles\vdo1.pcs"))
       {
-        Task<HttpResponseMessage> task = new HttpClient().PostAsync(BuildVdoImportUrl(url), new StreamContent(fs));
+        MultipartContent multipartContent = new MultipartContent("vdo+msaccess");
+        multipartContent.Add(new StreamContent(fs));
+        Task<HttpResponseMessage> task = new HttpClient().PostAsync(BuildVdoImportUrl(url), multipartContent);
         task.Wait();
         HttpResponseMessage response = task.Result;
         Assert.AreEqual(new Uri(new TestEnvironment().BaseUrl, "tracks"), response.Headers.Location);

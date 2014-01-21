@@ -28,10 +28,5 @@
     {
       throw new NotImplementedException();
     }
-
-    public IEnumerable<TrackSample> GetTrackSamples(string dbId, string trackId)
-    {
-      throw new NotImplementedException();
-    }
   }
 }

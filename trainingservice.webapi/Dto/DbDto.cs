@@ -1,9 +1,9 @@
 ﻿namespace trainingservice.webapi.Dto
 {
-  public class DbDto
-  {
-    public string Id { get; set; }
+  using global::webapi.framework.REST;
 
-    public TrackSummaryDto[] Tracks { get; set; }
+  public class DbDto : ResourceBase
+  {
+    ////public TrackSummaryDto[] Tracks { get; set; }
   }
 }

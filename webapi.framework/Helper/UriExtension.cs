@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace trainingservice.webapi.test
+﻿namespace webapi.framework.Helper
 {
+  using System;
+
   public static class UriExtension
   {
     public static Uri Append(this Uri front, string back)

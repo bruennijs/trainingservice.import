@@ -2,10 +2,10 @@
 
 namespace trainingservice.webapi.Dto
 {
-  public class TrackSummaryDto
-  {
-    public string TrackId { get; set; }
+  using global::webapi.framework.REST;
 
+  public class TrackSummaryDto : ResourceBase
+  {
     public DateTime Created { get; set; }
 
     public double Distance { get; set; }

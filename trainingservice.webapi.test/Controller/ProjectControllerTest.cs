@@ -5,6 +5,8 @@
   using System.Net.Http;
   using System.Threading.Tasks;
 
+  using global::webapi.framework.Helper;
+
   using Newtonsoft.Json;
 
   using NUnit.Framework;

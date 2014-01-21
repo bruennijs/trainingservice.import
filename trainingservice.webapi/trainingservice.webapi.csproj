@@ -57,7 +57,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -162,6 +162,10 @@
     <ProjectReference Include="..\trainingservice.import.vdo\trainingservice.import.vdo.csproj">
       <Project>{B7D985A1-307D-4BC9-8F10-9B3921BAE169}</Project>
       <Name>trainingservice.import.vdo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\webapi.framework\webapi.framework.csproj">
+      <Project>{A3B6150D-E372-417F-8F72-D0F4B57C57EA}</Project>
+      <Name>webapi.framework</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
