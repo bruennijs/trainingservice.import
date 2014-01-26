@@ -4,7 +4,7 @@ namespace trainingservice.import.core.Interfaces.Models
 
   public class TrackPointModel : EntityBase
   {
-    public int Distance { get; set; }
+    public double Distance { get; set; }
 
     public int Elevation { get; set; }
 

@@ -61,10 +61,11 @@ namespace trainingservice.vdoimport.Repository
                  Id = id,
                  Date = date.Add(startTime),
                  Duration = CalcualteDuration(reader.GetDateTime(3)),
-                 Elavation = Convert.ToUInt32(reader.GetDouble(5)),
-                 Distance = Convert.ToUInt32(reader.GetDouble(4)),
-                 HeartRateAvg = Convert.ToUInt32(reader.GetDouble(6)),
-                 HeartRateMax = Convert.ToUInt32(reader.GetDouble(7))
+                 Elavation = reader.GetInt32(5),
+                 Distance = reader.GetDouble(4),
+                 HeartRateAvg = reader.GetInt32(6),
+                 HeartRateMax = reader.GetInt32(7),
+                 ////CadenceAvg = reader.GetDouble(8)
                };
     }
 
@@ -92,7 +93,7 @@ namespace trainingservice.vdoimport.Repository
       return new TrackPointModel()
                {
                  Id = reader.GetInt32(0).ToString(CultureInfo.InvariantCulture),
-                 Distance = reader.GetInt32(1),
+                 Distance = reader.GetDouble(1),
                  ////Time = DateTime.Parse(reader.GetString(2), CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToUniversalTime(),
                  Time = CalcualteDuration(DateTime.Parse(reader.GetString(2), CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToUniversalTime()),
                  Heartrate = reader.GetInt32(3),

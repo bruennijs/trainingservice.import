@@ -10,10 +10,12 @@
 
     public double Distance { get; set; }
 
-    public double HeartRateAvg { get; set; }
+    public int HeartRateAvg { get; set; }
 
-    public double HeartRateMax { get; set; }
+    public int HeartRateMax { get; set; }
 
-    public double Elavation { get; set; }
+    public int Elavation { get; set; }
+
+    public int CadenceAvg { get; set; }
   }
 }

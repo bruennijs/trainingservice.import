@@ -42,15 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\XElementTCXv2Extension.cs" />
     <Compile Include="Helper\XElementGpxExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GpxExportServiceTest.cs" />
+    <Compile Include="Services\TCXv2ExportServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Files\gpx.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Files\TrackPointExtensionv1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Files\TrainingCenterDatabasev2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

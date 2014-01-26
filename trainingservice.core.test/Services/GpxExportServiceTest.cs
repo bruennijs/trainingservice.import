@@ -9,7 +9,7 @@
 
   using NUnit.Framework;
 
-  using trainingservice.core.test.Helper;
+  using trainingservice.core.test.Helper.Gpxv11;
   using trainingservice.import.core.Interfaces.Models;
   using trainingservice.import.core.Services;
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trainingservice.core.test.Helper
+namespace trainingservice.core.test.Helper.Gpxv11
 {
   using System.Xml;
   using System.Xml.Linq;
