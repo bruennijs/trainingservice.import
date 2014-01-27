@@ -31,7 +31,7 @@ namespace trainingservice.import.core.Services
             new XElement(TargetNs + "Id", XmlConvert.ToString(track.Date, XmlDateTimeSerializationMode.Utc)),
             new XAttribute("Sport", "Biking"),
             activityLap,
-            new XElement(TargetNs + "Creator", "olli's trainingservice"))));
+            new XElement(TargetNs + "Creator", "trainingservice"))));
 
       if (trackPoints != null)
       {
@@ -75,7 +75,8 @@ namespace trainingservice.import.core.Services
 
       if (tp.Power != 0)
       {
-        root.Add(SerializeTrackpointExtension(tp));
+        ////root.Add(SerializeTrackpointExtension(tp));
+        root.Add(SerializeTrackpointTagebuchExtension(tp));
       }
       return root;
     }
@@ -113,6 +114,13 @@ namespace trainingservice.import.core.Services
       return new XElement(TargetNs + "Extensions",
         new XElement(TpExtNs + "TrackPointExtension",
           new XElement(TpExtNs + "power", tp.Power)));
+    }
+
+    private static XElement SerializeTrackpointTagebuchExtension(TrackPointModel tp)
+    {
+      return new XElement(TargetNs + "Extensions",
+        new XElement(TpExtNs + "TPX",
+          new XElement(TpExtNs + "Watts", tp.Power)));
     }
   }
 }

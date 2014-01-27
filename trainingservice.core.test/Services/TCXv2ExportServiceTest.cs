@@ -141,6 +141,7 @@
 
     [Test]
     [TestCase(340)]
+    [Ignore]
     public void When_export_should_trackpoint_power(int value)
     {
       Stream outStream = CreateStream();
@@ -153,6 +154,22 @@
       XElement tp = actual.Root.Activities().First().Laps().First().Tracks().First().Trackpoints().First();
 
       Assert.AreEqual(value, XmlConvert.ToInt32(tp.Element(TargetNs + "Extensions").Element(TpExtNs + "TrackPointExtension").Element(TpExtNs + "power").Value));
+    }
+
+    [Test]
+    [TestCase(340)]
+    public void When_export_should_trackpoint_power_on_trainingstagebich(int value)
+    {
+      Stream outStream = CreateStream();
+
+      TCXv2ExportService sut = new TCXv2ExportServiceBuilder().Build();
+      sut.Export(new TrackModel(), new[] { new TrackPointModel() { Power = value } }, outStream);
+
+      XDocument actual = Parse(outStream);
+
+      XElement tp = actual.Root.Activities().First().Laps().First().Tracks().First().Trackpoints().First();
+
+      Assert.AreEqual(value, XmlConvert.ToInt32(tp.Element(TargetNs + "Extensions").Element(TpExtNs + "TPX").Element(TpExtNs + "Watts").Value));
     }
 
     [Test]

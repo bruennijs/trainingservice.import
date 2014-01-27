@@ -31,6 +31,10 @@
 
     [Test]
     [TestCase(@".\TestFiles\vdo1.pcs", "3", @"C:\Temp\deleteme\vdo1_3.tcx")]
+    [TestCase(@".\TestFiles\vdo1.pcs", "7", @"C:\Temp\deleteme\vdo1_7.tcx")]
+    [TestCase(@"C:\Users\Bruentje\Dropbox\Rennrad\Radtraining\Saison 2014.pcs", "12", @"C:\Temp\deleteme\Saison2014_12.tcx")]
+    [TestCase(@"C:\Users\Bruentje\Dropbox\Rennrad\Radtraining\Saison 2014.pcs", "6", @"C:\Temp\deleteme\Saison2014_6.tcx")]
+    ////[TestCase(@"C:\Users\Bruentje\Dropbox\Rennrad\Radtraining\Saison 2014.pcs", "8", @"C:\Temp\deleteme\Saison2014_8.tcx")]
     public void When_export_should_tcx_created(string filePath, string id, string gpxFilePath)
     {
       ITrackRepository repo = new VdoTrackRepositoryBuilder().WithDatabaseFilePath(filePath).Build();
@@ -42,6 +46,6 @@
 
         export.Export(tm, repo.GetTrackPoints(tm), fs);
       }
-    }
+    }    
   }
 }
